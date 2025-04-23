@@ -28,14 +28,14 @@ const Modal = ({caption, children, onExit}: ArgTypes) => {
     >
       {/* Modal */}
       <div
-        className="bg-gray-900 relative sm:border max-h-screen border-white/15 sm:rounded-lg shadow-md overflow-hidden w-full sm:w-lg md:w-xl"
+        className="bg-gray-950 relative sm:border max-h-screen border-white/10 sm:rounded-lg shadow-md overflow-hidden w-full sm:w-lg md:w-xl animate-zoom"
         onClick={(e) => { e.stopPropagation(); }}
       >
         {/* Title Bar */}
-        <div className="bg-gray-800 p-3 sm:p-2 flex flex-row justify-between items-center absolute top-0 left-0 w-full">
+        <div className="bg-gray-900 p-3 sm:p-2 flex flex-row justify-between items-center absolute top-0 left-0 w-full">
           <p className="px-2">{caption}</p>
           <button
-            className="bg-blue-400/15 hover:bg-blue-400/20 border border-blue-400/30 px-1.5 py-1 rounded-md text-xs"
+            className="bg-blue-400/10 hover:bg-blue-400/20 border border-blue-400/20 px-1.5 py-1 rounded-md text-xs text-blue-400"
             onClick={onExit}
           >
             esc
@@ -43,7 +43,7 @@ const Modal = ({caption, children, onExit}: ArgTypes) => {
         </div>
 
         {/* Modal Content */}
-        <div className="p-4 max-h-screen overflow-auto pt-16">
+        <div className="p-5 max-h-screen overflow-auto pt-16">
           {children}
         </div>
       </div>
