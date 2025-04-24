@@ -7,7 +7,7 @@ const CurriculumModal = ({onExit} : {onExit: () => void}) => {
     <Modal caption="Curriculum" onExit={onExit}>
       <div className="">
         <p>
-          Download the undergraduate course curriculum of the Department of Electronics and Computer Engineering, as of 2020 and onwards.
+          Download the undergraduate course curriculum of the Department of Electrical and Computer Engineering, as of 2020 and onwards.
         </p>
         <div className="text-center mt-4">
           <a href={CurriculumPdf}>
