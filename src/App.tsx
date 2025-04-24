@@ -9,7 +9,7 @@ const App = () => {
   const [ twText, setTwText ] = useState('');
   const [ twIdx, setTwIdx ] = useState(0);
   const twMotto: string = 'Exploring Circuits & Executables';
-  const keyPressTime: number = 80;
+  const keyPressTime: number = 100;
   const typedChars = twMotto.slice(0, twIdx).split('');
 
   // Lol I should prolly learn DB or smth idk
@@ -51,8 +51,8 @@ const App = () => {
   useEffect(() => {
     if (twIdx < twMotto.length) {
       const timeout = setTimeout(() => {
-        setTwText(prev => prev + twMotto[twIdx]);
-        setTwIdx(prev => prev + 1);
+        setTwText(twText + twMotto[twIdx]);
+        setTwIdx(twIdx => twIdx + 1);
       }, keyPressTime);
 
       return () => clearTimeout(timeout);
