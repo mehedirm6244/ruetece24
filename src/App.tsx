@@ -16,7 +16,7 @@ const App = () => {
   const nicknames = [
     'Koushik', 'Rafat', 'Fariha', 'Mahdi', 'Azmain', 'Smriti', 'Tareq', 'Proma', 'Simum',
     'Nice', 'Shabib', 'Araf', 'Musfikur', 'Shefat', 'Rakib', 'Tasnim', 'Sami', 'Sharmista',
-    'Shams', 'Tausif', 'Ittihad', 'Abu Bokkor', 'Mahi', 'Samin', 'Sarah', 'Abdullah', 'Uddipon',
+    'Shams', 'Shadib', 'Ittihad', 'Abu Bokkor', 'Mahi', 'Samin', 'Sarah', 'Abdullah', 'Uddipon',
     'Siam', 'Nidhi', 'Mashrafee', 'Subhayon', 'Aminul', 'Hasibul', 'Ifaz', 'Jarin', 'Nafis',
     'Tamim', 'Sakib', 'Israq', 'Tirtho', 'Abujar', 'Rafi', 'Shihab', 'Aysha', 'Suchok', 'Emon',
     'Hamidur', 'Niloy', 'Sayma', 'Preety', 'Oleen', 'Abdullah', 'Rafin', 'Fazle', 'Sohan', 'Imran',
