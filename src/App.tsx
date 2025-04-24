@@ -9,19 +9,21 @@ const App = () => {
   const [ twText, setTwText ] = useState('');
   const [ twIdx, setTwIdx ] = useState(0);
   const twMotto: string = 'Exploring Circuits & Executables';
-
   const keyPressTime: number = 80;
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (twIdx < twMotto.length) {
-        setTwText(twText + twMotto[twIdx]);
-        setTwIdx(twIdx+1);
-      }
-    }, keyPressTime)
-  });
-
   const typedChars = twMotto.slice(0, twIdx).split('');
+
+  // Lol I should prolly learn DB or smth idk
+  const nicknames = [
+    'Koushik', 'Rafat', 'Fariha', 'Mahdi', 'Azmain', 'Smriti', 'Tareq', 'Proma', 'Simum',
+    'Nice', 'Shabib', 'Araf', 'Musfikur', 'Shefat', 'Rakib', 'Tasnim', 'Sami', 'Sharmista',
+    'Shams', 'Tausif', 'Ittihad', 'Abu Bokkor', 'Mahi', 'Samin', 'Sarah', 'Abdullah', 'Uddipon',
+    'Siam', 'Nidhi', 'Mashrafee', 'Subhayon', 'Aminul', 'Hasibul', 'Ifaz', 'Jarin', 'Nafis',
+    'Tamim', 'Sakib', 'Israq', 'Tirtho', 'Abujar', 'Rafi', 'Shihab', 'Aysha', 'Suchok', 'Emon',
+    'Hamidur', 'Niloy', 'Sayma', 'Preety', 'Oleen', 'Abdullah', 'Rafin', 'Fazle', 'Sohan', 'Imran',
+    'Tamjid', 'Shammo', 'Amir'
+  ];
+  const [currentName, setCurrentName] = useState('..');
+  const nameSwitchDelay = 350;
 
   const [ showCurriculum, setShowCurriculum ] = useState(false);
   const [ showResources, setShowResources ] = useState(false);
@@ -44,6 +46,28 @@ const App = () => {
       icon: Calendar
     }
   ];
+
+  // Typing effect
+  useEffect(() => {
+    if (twIdx < twMotto.length) {
+      const timeout = setTimeout(() => {
+        setTwText(prev => prev + twMotto[twIdx]);
+        setTwIdx(prev => prev + 1);
+      }, keyPressTime);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [twIdx]);
+
+  // Name switcher – run independently
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * nicknames.length);
+      setCurrentName(nicknames[randomIndex]);
+    }, nameSwitchDelay);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (<>
     {/* Logo */}
@@ -92,9 +116,12 @@ const App = () => {
 
       {/* Credits */}
       <div className="mt-8 text-gray-300 font-slab font-medium">
-        <span className="text-yellow-300">&lt;</span>
-        Powered by <span className="text-blue-400">ECE &apos;24</span>
-        <span className="text-yellow-300">&gt;</span>
+        Powered by&#32;&nbsp;
+        <span className="font-mono text-sm">
+          ~/ECE/24/&apos;
+          <span className="text-blue-300">{currentName}</span>
+          &apos;
+        </span>
       </div>
     </div>
 

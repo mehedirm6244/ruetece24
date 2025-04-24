@@ -19,6 +19,12 @@ export const ResourceData: ResourceType[] = [
     url: 'https://www.youtube.com/@CoreDumpped'
   },
   {
+    title: 'Discrete Mathematics and Its Applications',
+    desc: 'Written by Kenneth H. Rosen',
+    type: 'Book',
+    url: 'https://github.com/gigahidjrikaaa/Engineering-Books/blob/main/Discrete%20Mathematics/Rosen%20-%20Discrete%20Mathematics%20and%20Its%20Application%20%5B8th%20Edition%5D.pdf'
+  },
+  {
     title: 'Introductory Circuit Analysis',
     desc: 'Written by Robert L. Boylestad',
     type: 'Book',
