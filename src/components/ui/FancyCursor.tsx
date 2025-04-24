@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 const FancyCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [clicked, setClicked] = useState(false);
-  const [visible, setVisible] = useState(true);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [isInWindow, setInWindow] = useState(false);
 
   useEffect(() => {
     // Detect touch device
@@ -12,32 +12,30 @@ const FancyCursor = () => {
     const coarse = window.matchMedia("(pointer: coarse)").matches;
     setIsTouchDevice(touch || coarse);
 
-    const moveHandler = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-    };
+    const moveHandler = (e: MouseEvent) =>  setPosition({ x: e.clientX, y: e.clientY });
 
     const clickHandler = () => {
       setClicked(true);
       setTimeout(() => setClicked(false), 150);
     };
 
-    const hideHandler = () => setVisible(false);
-    const showHandler = () => setVisible(true);
+    const hideHandler = () =>  setInWindow(false);
+    const showHandler = () =>  setInWindow(true);
 
     window.addEventListener("mousemove", moveHandler);
     window.addEventListener("mousedown", clickHandler);
-    window.addEventListener("mouseleave", hideHandler);
-    window.addEventListener("mouseenter", showHandler);
+    document.body.addEventListener("mouseleave", hideHandler);
+    document.body.addEventListener("mouseenter", showHandler);
 
     return () => {
       window.removeEventListener("mousemove", moveHandler);
       window.removeEventListener("mousedown", clickHandler);
-      window.removeEventListener("mouseleave", hideHandler);
-      window.removeEventListener("mouseenter", showHandler);
+      document.body.removeEventListener("mouseleave", hideHandler);
+      document.body.removeEventListener("mouseenter", showHandler);
     };
   }, []);
 
-  if (!visible || isTouchDevice) {
+  if (isTouchDevice) {
     return null;
   }
 
@@ -45,7 +43,9 @@ const FancyCursor = () => {
 
   return (
     <div
-      className="fixed top-0 left-0 pointer-events-none z-[9999] bg-blue-500/40 rounded-full blur-2xl transition-all duration-50 ease-out"
+      className={`
+        fixed top-0 left-0 pointer-events-none z-[9999] bg-blue-500/40 rounded-full blur-2xl transition-all duration-50 ease-out ${isInWindow? 'opacity-100' : 'opacity-0'}
+      `}
       style={{
         width: `${size * 4}px`,
         height: `${size * 4}px`,

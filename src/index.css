@@ -52,6 +52,23 @@
     @apply outline-blue-300 outline-2 outline-offset-2
   }
 
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-1.5 h-1.5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-blue-200;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue-300;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    @apply bg-blue-400;
+  }
+
   html {
     @apply scroll-smooth select-none;
   }

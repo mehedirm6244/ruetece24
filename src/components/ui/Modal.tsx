@@ -33,7 +33,7 @@ const Modal = ({caption, children, onExit}: ArgTypes) => {
     // Backdrop
     <div
       className={`
-        fixed top-0 left-0 h-screen w-screen touch-none z-40 flex justify-center items-center ${isClosing ? 'backdrop-blur-none bg-black/0' : 'backdrop-blur-xs bg-gray-900/30'} duration-100
+        fixed top-0 left-0 h-screen w-screen touch-none z-40 flex justify-center items-center ${isClosing ? 'backdrop-blur-none bg-black/0' : 'backdrop-blur-xs bg-gray-900/30'}
       `}
       onClick={handleExit}
     >
