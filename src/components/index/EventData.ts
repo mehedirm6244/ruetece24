@@ -7,6 +7,6 @@ type EventType = {
 export const EventData: EventType[] = [
   {
     title: 'Orientation of Session 2024-25',
-    date: '09 Apr, 2025'
+    date: '08 Apr, 2025'
   }
 ]
