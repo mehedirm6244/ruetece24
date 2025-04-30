@@ -12,16 +12,16 @@ const App = () => {
   const keyPressTime: number = 100;
   const typedChars = twMotto.slice(0, twIdx).split('');
 
-  // Lol I should prolly learn DB or smth idk
   const nicknames = [
-    'Koushik', 'Rafat', 'Fariha', 'Mahdi', 'Azmain', 'Smriti', 'Tareq', 'Proma', 'Simum',
-    'Nice', 'Shabib', 'Araf', 'Musfikur', 'Shefat', 'Rakib', 'Tasnim', 'Sami', 'Sharmista',
-    'Shams', 'Shadib', 'Ittihad', 'Abu Bokkor', 'Mahi', 'Samin', 'Sarah', 'Abdullah', 'Uddipon',
-    'Siam', 'Nidhi', 'Mashrafee', 'Subhayon', 'Aminul', 'Hasibul', 'Ifaz', 'Jarin', 'Nafis',
-    'Tamim', 'Sakib', 'Israq', 'Tirtho', 'Abujar', 'Rafi', 'Shihab', 'Aysha', 'Suchok', 'Emon',
-    'Hamidur', 'Niloy', 'Sayma', 'Preety', 'Oleen', 'Abdullah', 'Rafin', 'Fazle', 'Sohan', 'Imran',
-    'Tamjid', 'Shammo', 'Amir'
+    'Fariha', 'Mahdi', 'Azmain', 'Smriti', 'Tareq', 'Proma', 'Simum', 'Nice', 'Shabib', 'Araf',
+    'Musfikur', 'Shefat', 'Rakib', 'Tasnim', 'Sami', 'Sharmista', 'Shams', 'Shadib', 'Ittahad',
+    'Mahi', 'Samin', 'Sarah', 'Abdullah', 'Uddipon', 'Siam', 'Nidhi', 'Mashrafee', 'Amimul',
+    'Tamim', 'Galib', 'Shihab',  'Niloy', 'Saimur', 'Oleen', 'Abdullah', 'Rafin', 'Fazle',
+    'Sohan', 'Imran', 'Tamjid', 'Shammo', 'Amir', 'Jakaria', 'Al Khalik', 'Sajeeb', 'Zahi',
+    'Faiza', 'Tushar', 'Arnob', 'Rafiu', 'Showmee', 'Mugdho', 'Nafij', 'Naeem', 'Labib',
+    'Nafisa', 'Auyon', 'Nishit', 'Noor', 'Ahsan'
   ];
+
   const [currentName, setCurrentName] = useState('..');
   const nameSwitchDelay = 350;
 
