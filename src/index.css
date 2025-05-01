@@ -48,13 +48,17 @@
     @apply box-border;
   }
 
-  *:focus-visible {
-    @apply outline-blue-300 outline-2 outline-offset-2
+  :focus-visible {
+    @apply outline-blue-300 outline-2 outline-offset-2;
+  }
+
+  ::selection {
+    @apply bg-blue-400/30;
   }
 
   /* Scrollbar */
   ::-webkit-scrollbar {
-    @apply w-1.5 h-1.5;
+    @apply w-1 h-1 bg-gray-950;
   }
 
   ::-webkit-scrollbar-thumb {

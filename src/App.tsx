@@ -13,12 +13,12 @@ const App = () => {
   const typedChars = twMotto.slice(0, twIdx).split('');
 
   const nicknames = [
-    'Fariha', 'Mahdi', 'Azmain', 'Smriti', 'Tareq', 'Proma', 'Simum', 'Nice', 'Shabib', 'Araf',
-    'Musfikur', 'Shefat', 'Rakib', 'Tasnim', 'Sami', 'Sharmista', 'Shams', 'Shadib', 'Ittahad',
-    'Mahi', 'Samin', 'Sarah', 'Abdullah', 'Uddipon', 'Siam', 'Nidhi', 'Mashrafee', 'Amimul',
-    'Tamim', 'Galib', 'Shihab',  'Niloy', 'Saimur', 'Oleen', 'Abdullah', 'Rafin', 'Fazle',
-    'Sohan', 'Imran', 'Tamjid', 'Shammo', 'Amir', 'Jakaria', 'Al Khalik', 'Sajeeb', 'Zahi',
-    'Faiza', 'Tushar', 'Arnob', 'Rafiu', 'Showmee', 'Mugdho', 'Nafij', 'Naeem', 'Labib',
+    'Fariha', 'Mahdi', 'Azmain', 'Smriti', 'Tareq', 'Proma', 'Simum', 'Nice', 'Shabib',
+    'Araf', 'Musfikur', 'Shefat', 'Rakib', 'Tasnim', 'Sami', 'Sharmista', 'Shams', 'Shadib',
+    'Ittahad', 'Mahi', 'Samin', 'Sarah', 'Abdullah', 'Uddipon', 'Siam', 'Nidhi', 'Mashrafee',
+    'Amimul', 'Tamim', 'Galib', 'Shihab',  'Niloy', 'Saimur', 'Oleen', 'Abdullah', 'Rafin',
+    'Fazle', 'Sohan', 'Imran', 'Tamjid', 'Shammo', 'Amir', 'Jakaria', 'Al Khalik', 'Sajeeb',
+    'Zahi', 'Faiza', 'Tushar', 'Arnob', 'Rafiu', 'Showmee', 'Mugdho', 'Nafij', 'Naeem', 'Labib',
     'Nafisa', 'Auyon', 'Nishit', 'Noor', 'Ahsan'
   ];
 
@@ -98,7 +98,7 @@ const App = () => {
       </p>
 
       {/* Quick Links */}
-      <div className="flex flex-row flex-wrap justify-center align-middle items-center gap-2 mt-3">
+      <div className="flex flex-row flex-wrap justify-center align-middle items-center gap-2 mt-3 max-w-sm">
         {links.map((link, i) => {
           return (
             <button key={i}

@@ -21,7 +21,7 @@ const CurriculumModal = ({onExit} : {onExit: () => void}) => {
         
           <p className="mt-4 text-sm text-gray-300">
             md5 Hash:&#32;
-            <span className="text-green-300 font-mono">ffb92e3e7ff30402fa202bc163c1428f</span>
+            <span className="text-green-300 font-mono select-all">ffb92e3e7ff30402fa202bc163c1428f</span>
           </p>
         </div>
       </div>

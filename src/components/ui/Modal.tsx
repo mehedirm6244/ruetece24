@@ -40,12 +40,12 @@ const Modal = ({caption, children, onExit}: ArgTypes) => {
       {/* Modal */}
       <div
         className={`
-          bg-gray-900 relative border max-h-screen border-gray-100/15 sm:rounded-lg shadow-md overflow-hidden w-full sm:w-lg md:w-xl  ${isClosing ? 'animate-modal-out' : 'animate-modal-in'}
+          bg-gray-900 relative border sm:max-h-[90%] border-gray-100/15 sm:rounded-lg shadow-md overflow-hidden w-full sm:w-lg md:w-xl  ${isClosing ? 'animate-modal-out' : 'animate-modal-in'}
         `}
         onClick={(e) => { e.stopPropagation(); }}
       >
         {/* Title Bar */}
-        <div className="bg-gray-800 p-3 sm:p-2 flex flex-row justify-between items-center absolute top-0 left-0 w-full">
+        <div className="bg-gray-800 p-3 sm:p-2 flex flex-row justify-between items-center sticky top-0 left-0 w-full shadow-sm">
           <p className="px-2">{caption}</p>
           <button
             className="bg-blue-400/10 hover:bg-blue-400/20 border border-blue-400/20 px-1.5 py-0.5 rounded-md text-xs text-blue-400"
@@ -56,7 +56,7 @@ const Modal = ({caption, children, onExit}: ArgTypes) => {
         </div>
 
         {/* Modal Content */}
-        <div className="p-5 max-h-screen overflow-auto pt-16">
+        <div className="p-5 max-h-[calc(100vh-3rem)] sm:max-h-[calc(90vh-3rem)] overflow-auto">
           {children}
         </div>
       </div>
