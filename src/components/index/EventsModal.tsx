@@ -10,10 +10,10 @@ const EventsModal = ({onExit} : {onExit: () => void}) => {
           <table className="min-w-full text-left border-collapse table-auto">
             <thead>
               <tr className="border-b border-gray-800">
-                <th className="p-2 font-medium text-gray-300">
+                <th className="p-2 font-medium text-gray-300 w-2/3">
                   <Star size="16" className="inline -mt-0.5 mr-1"/>Event
                 </th>
-                <th className="p-2 font-medium text-gray-300">
+                <th className="p-2 font-medium text-gray-300 w-1/3">
                   <Calendar size="16" className="inline -mt-0.5 mr-1"/>Date
                 </th>
               </tr>
@@ -27,7 +27,7 @@ const EventsModal = ({onExit} : {onExit: () => void}) => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className=""
-                    >
+                      >
                       {event.title}
                     </a>
                   </td>

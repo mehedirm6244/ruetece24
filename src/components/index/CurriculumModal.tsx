@@ -13,7 +13,7 @@ const CurriculumModal = ({onExit} : {onExit: () => void}) => {
           <a href={CurriculumPdf}>
             <button
               className="font-medium text-sm text-blue-400 bg-blue-400/7 hover:bg-blue-400/15 border border-blue-400/15 rounded-lg px-3 py-1.5"
-            >
+              >
               <File size={16} className="-mt-0.5 inline mr-1" />
               Curriculum PDF
             </button>

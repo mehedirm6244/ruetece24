@@ -77,7 +77,7 @@ const App = () => {
         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Crect width='100%25' height='100%25' fill='%23030914'/%3E%3Cpath d='M 20 0 H 0 V 20' fill='none' stroke='%23071329' stroke-width='1'/%3E%3C/svg%3E")`,
         backgroundRepeat: 'repeat',
       }}
-    >
+      >
       <img
         src={RuetLogo}
         className="drop-shadow w-40 md:w-44"
@@ -104,7 +104,7 @@ const App = () => {
             <button key={i}
               className="text-sm text-blue-400 bg-blue-400/7 hover:bg-blue-400/15 border border-blue-400/15 rounded-lg px-3 py-1.5 backdrop-blur-sm"
               onClick={link.onClick}
-            >
+              >
               <link.icon
                 size={16}
                 className="inline -mt-0.5 mr-1"

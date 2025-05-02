@@ -12,14 +12,14 @@ const ResourcesModal = ({onExit} : {onExit: () => void}) => {
           <table className="min-w-full text-left border-collapse table-auto">
             <thead>
               <tr className="border-b border-gray-800">
-                <th className="p-2 font-medium text-gray-300">
-                  <Link size="16" className="inline -mt-0.5 mr-1"/>Title
+                <th className="p-2 font-medium text-gray-300 w-1/3">
+                  <Link size="16" className="inline -mt-0.5 mr-1.5"/>Title
                 </th>
-                <th className="p-2 font-medium text-gray-300">
-                  <Library size="16" className="inline -mt-0.5 mr-1"/>Type
+                <th className="p-2 font-medium text-gray-300 w-1/6">
+                  <Library size="16" className="inline -mt-0.5 mr-1.5"/>Type
                 </th>
-                <th className="p-2 font-medium text-gray-300">
-                  <Info size="16" className="inline -mt-0.5 mr-1"/>Desc
+                <th className="p-2 font-medium text-gray-300 w-1/2">
+                  <Info size="16" className="inline -mt-0.5 mr-1.5"/>Description
                 </th>
               </tr>
             </thead>
@@ -32,7 +32,7 @@ const ResourcesModal = ({onExit} : {onExit: () => void}) => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className=""
-                    >
+                      >
                       {resource.title}
                     </a>
                   </td>
@@ -55,14 +55,14 @@ const ResourcesModal = ({onExit} : {onExit: () => void}) => {
           <table className="min-w-full text-left border-collapse table-auto">
             <thead>
               <tr className="border-b border-gray-800">
-                <th className="p-2 font-medium text-gray-300">
-                  <Link size="16" className="inline -mt-0.5 mr-1"/>Title
+                <th className="p-2 font-medium text-gray-300 w-2/5">
+                  <Link size="16" className="inline -mt-0.5 mr-1.5"/>Title
                 </th>
-                <th className="p-2 font-medium text-gray-300">
-                  <Library size="16" className="inline -mt-0.5 mr-1"/>Type
+                <th className="p-2 font-medium text-gray-300 w-1/5">
+                  <Library size="16" className="inline -mt-0.5 mr-1.5"/>Type
                 </th>
-                <th className="p-2 font-medium text-gray-300">
-                  <GraduationCap size="16" className="inline -mt-0.5 mr-1"/>Course
+                <th className="p-2 font-medium text-gray-300 w-2/5">
+                  <GraduationCap size="16" className="inline -mt-0.5 mr-1.5"/>Course
                 </th>
               </tr>
             </thead>
@@ -75,12 +75,20 @@ const ResourcesModal = ({onExit} : {onExit: () => void}) => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className=""
-                    >
+                      >
                       {resource.title}
                     </a>
                   </td>
                   <td className="p-2 text-gray-200">{resource.type}</td>
-                  <td className="p-2 text-gray-200 break-all">{resource.course}</td>
+                  <td className="p-2 text-gray-200 break-all">
+                    <div className="flex flex-row gap-1.5 flex-wrap">
+                      {resource.courses?.map((course, index) => (
+                        <span key={index} className="bg-blue-300/5 text-blue-300 px-1 py-0.5 text-xs rounded border border-blue-200/10">
+                          {course}
+                        </span>
+                      ))}
+                    </div>
+                  </td>
                 </tr>
               ))}
             </tbody>

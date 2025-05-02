@@ -2,7 +2,13 @@ type ResourceType = {
   title: string,
   type: string,
   desc?: string,
-  course?: string,
+  url: string,
+}
+
+type CourseResourceType = {
+  title: string,
+  type: string,
+  courses: string[],
   url: string,
 }
 
@@ -10,7 +16,7 @@ export const ResourceData: ResourceType[] = [
   {
     title: 'MIT OpenCourseWare',
     type: 'Website',
-    desc: 'Open courses from MIT',
+    desc: 'Courses from MIT',
     url: 'https://ocw.mit.edu/courses/'
   },
   {
@@ -33,11 +39,11 @@ export const ResourceData: ResourceType[] = [
   }
 ]
 
-export const CourseResourceData: ResourceType[] = [
+export const CourseResourceData: CourseResourceType[] = [
   {
     title: 'Unix Processes in C',
-    type: 'YT Playlist',
-    course: 'Unix Programming',
+    type: 'Playlist',
+    courses: ['Unix Programming'],
     url: 'https://www.youtube.com/playlist?list=PLfqABt5AS4FkW5mOn2Tn9ZZLLDwA3kZUY'
   }
 ]
