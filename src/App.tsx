@@ -13,14 +13,15 @@ const App = () => {
   const typedChars = twMotto.slice(0, twIdx).split('');
 
   const nicknames = [
-    'Fariha', 'Mahdi', 'Azmain', 'Smriti', 'Tareq', 'Proma', 'Simum', 'Nice', 'Shabib',
-    'Araf', 'Musfikur', 'Shefat', 'Rakib', 'Tasnim', 'Sami', 'Sharmista', 'Shams', 'Shadib',
-    'Ittahad', 'Mahi', 'Samin', 'Sarah', 'Abdullah', 'Uddipon', 'Siam', 'Nidhi', 'Mashrafee',
-    'Amimul', 'Tamim', 'Galib', 'Shihab',  'Niloy', 'Saimur', 'Oleen', 'Abdullah', 'Rafin',
-    'Fazle', 'Sohan', 'Imran', 'Tamjid', 'Shammo', 'Amir', 'Jakaria', 'Al Khalik', 'Sajeeb',
-    'Zahi', 'Faiza', 'Tushar', 'Arnob', 'Rafiu', 'Showmee', 'Mugdho', 'Nafij', 'Naeem', 'Labib',
-    'Nafisa', 'Auyon', 'Nishit', 'Noor', 'Ahsan'
+    'Azmain', 'Smriti', 'Tareq', 'Simum', 'Nice', 'Shabib', 'Araf', 'Tahanan', 'Shefat',
+    'Rakibul', 'Tasnim', 'Sami', 'Sharmista', 'Ittahad', 'Mahi', 'Samin', 'Sarah', 'Abdullah',
+    'Uddipon', 'Siam', 'Mashrafee', 'Amimul', 'Tamim', 'Galib', 'Shihab', 'Niloy', 'Saimur',
+    'Oleen', 'Rafin', 'Tamjid', 'Al Khalik', 'Sajeeb', 'Faiza', 'Tushar', 'Arnob',
+    'Rafiu', 'Showmee', 'Mugdho', 'Nafij', 'Naeem', 'Labib', 'Nafisa', 'Auyon', 'Nishit',
+    'Ahsan', 'Nahira', 'Tousif', 'Tahsin', 'Preetom', 'Alvi', 'Tanbir', 'Srabony', 'Rahat',
+    'Shahin', 'Naimul', 'Ashikin', 'Pronob', 'Roktim', 'Shibajit', 'Joyita'
   ];
+  console.log(nicknames.length)
 
   const [currentName, setCurrentName] = useState('..');
   const nameSwitchDelay = 350;

@@ -12,14 +12,14 @@ const ResourcesModal = ({onExit} : {onExit: () => void}) => {
           <table className="min-w-full text-left border-collapse table-auto">
             <thead>
               <tr className="border-b border-gray-800">
-                <th className="p-2 font-medium text-gray-300 w-1/3">
+                <th className="p-2 font-medium text-gray-300 w-[30%]">
                   <Link size="16" className="inline -mt-0.5 mr-1.5"/>Title
                 </th>
-                <th className="p-2 font-medium text-gray-300 w-1/6">
-                  <Library size="16" className="inline -mt-0.5 mr-1.5"/>Type
-                </th>
-                <th className="p-2 font-medium text-gray-300 w-1/2">
+                <th className="p-2 font-medium text-gray-300 w-2/5">
                   <Info size="16" className="inline -mt-0.5 mr-1.5"/>Description
+                </th>
+                <th className="p-2 font-medium text-gray-300 w-3/10">
+                  <Library size="16" className="inline -mt-0.5 mr-1.5"/>Type
                 </th>
               </tr>
             </thead>
@@ -36,8 +36,12 @@ const ResourcesModal = ({onExit} : {onExit: () => void}) => {
                       {resource.title}
                     </a>
                   </td>
-                  <td className="p-2 text-gray-200">{resource.type}</td>
-                  <td className="p-2 text-gray-200 break-all">{resource.desc}</td>
+                  <td className="p-2 text-gray-200">{resource.desc}</td>
+                  <td className="p-2 text-gray-200">
+                    <span className="bg-blue-300/5 text-blue-300 px-1 py-0.5 text-xs rounded border border-blue-200/10">
+                      {resource.type}
+                    </span>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -55,14 +59,14 @@ const ResourcesModal = ({onExit} : {onExit: () => void}) => {
           <table className="min-w-full text-left border-collapse table-auto">
             <thead>
               <tr className="border-b border-gray-800">
-                <th className="p-2 font-medium text-gray-300 w-2/5">
+                <th className="p-2 font-medium text-gray-300 w-3/10">
                   <Link size="16" className="inline -mt-0.5 mr-1.5"/>Title
-                </th>
-                <th className="p-2 font-medium text-gray-300 w-1/5">
-                  <Library size="16" className="inline -mt-0.5 mr-1.5"/>Type
                 </th>
                 <th className="p-2 font-medium text-gray-300 w-2/5">
                   <GraduationCap size="16" className="inline -mt-0.5 mr-1.5"/>Course
+                </th>
+                <th className="p-2 font-medium text-gray-300 w-3/10">
+                  <Library size="16" className="inline -mt-0.5 mr-1.5"/>Type
                 </th>
               </tr>
             </thead>
@@ -79,7 +83,6 @@ const ResourcesModal = ({onExit} : {onExit: () => void}) => {
                       {resource.title}
                     </a>
                   </td>
-                  <td className="p-2 text-gray-200">{resource.type}</td>
                   <td className="p-2 text-gray-200 break-all">
                     <div className="flex flex-row gap-1.5 flex-wrap">
                       {resource.courses?.map((course, index) => (
@@ -88,6 +91,11 @@ const ResourcesModal = ({onExit} : {onExit: () => void}) => {
                         </span>
                       ))}
                     </div>
+                  </td>
+                  <td className="p-2 text-gray-200">
+                    <span className="bg-blue-300/5 text-blue-300 px-1 py-0.5 text-xs rounded border border-blue-200/10">
+                      {resource.type}
+                    </span>
                   </td>
                 </tr>
               ))}
